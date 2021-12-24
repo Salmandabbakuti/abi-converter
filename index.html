@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ABI Converter</title>
+  <style>
+    .error {
+      color: red;
+      text-align: center;
+    }
+
+    textarea {
+      border: 1px solid #999999;
+      height: 90%;
+      width: 40%;
+    }
+
+    footer {
+      position: fixed;
+      /* margin-top: 2%; */
+      height: 50;
+      width: 98%;
+      text-align: center;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="text-align: center;">ABI Converter</h1>
+  <div style="text-align: center;">
+    <textarea name="abiInput" id="abiInput" rows="45" cols="50" placeholder="Paste your ABI here"></textarea>
+    <button onclick="convertABI()">Convert</button>
+    <textarea id="abiOutput" rows="45" cols="50"></textarea>
+    <button onclick="copyToClipboard()">Copy</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.1/ethers.umd.min.js"
+    integrity="sha512-gQWBln9mqgIsFvHVDyzBZJSjxrUPbT2oOXw2I6HlyeeQ3x7uysaSC3gWXAW45iVRFIxyNFbsukUFyKEpQNBBsg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="index.js"></script>
+</body>
+<footer>
+  <hr>
+  <div id="log"></div>
+  <hr>
+  <div id="event"></div>
+  <h6 style="text-align: right;">&copy Salman Dabbakuti </h6>
+</footer>
+
+</html>
